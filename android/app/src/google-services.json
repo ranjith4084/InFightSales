@@ -1,0 +1,47 @@
+{
+    "project_info": {
+      "project_number": "635705414515",
+      "project_id": "infightsales",
+      "storage_bucket": "infightsales.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:635705414515:android:6a1014476fd0809347ab06",
+          "android_client_info": {
+            "package_name": "com.infightsales"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "635705414515-sqnm85hge0vuocj9ov9re7u7go4eges3.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.infightsales",
+              "certificate_hash": "172f18ce4fb369a3e66d4dc89c5f6867eb329437"
+            }
+          },
+          {
+            "client_id": "635705414515-i5intq4acqm3j8a8i1hskhai4r7963ir.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAsL_qW5U5naX1DvBCBxy-_NGghyazMWk4"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "635705414515-i5intq4acqm3j8a8i1hskhai4r7963ir.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
