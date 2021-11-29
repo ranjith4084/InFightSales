@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:infightsales/view_and_controllers/ProductDescription/Product_Description.dart';
+import 'package:infightsales/view_and_controllers/add_visit/add_visit.dart';
 import 'package:infightsales/view_and_controllers/client_list/client_list.dart';
 import 'package:infightsales/view_and_controllers/forget_password/forget_password.dart';
+import 'package:infightsales/view_and_controllers/map_Screen/map_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -238,9 +241,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     InkWell(
                       onTap: () {
                         print("Clicked 2");
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => ClientList()),
-                        );
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(builder: (context) => MapScreen()),
+                        // );
                       },
                       child: Container(
                         width: 295,
