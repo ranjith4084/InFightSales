@@ -767,7 +767,30 @@ class _ClientListState extends State<ClientList> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
+       extendBody: true,
+       bottomNavigationBar: Container(
+         height: 80,
+         color: Colors.red,
+         child: Stack(
+           children: [
+             Align(
+               alignment: Alignment.topCenter,
+               child: Container(
+                 height: 20,
+                 width: 20,
+                 color: Colors.lightGreenAccent,
+               ),
+             ),
+            /* Alig(
+               child: Container(
+                 height: 60,
+                 color: Colors.white,
+               ),
+             )*/
+           ],
+         ),
+       ),
+       /* bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
           elevation: 0,
@@ -798,7 +821,7 @@ class _ClientListState extends State<ClientList> {
           currentIndex: _selectedIndex,
           selectedItemColor: Color(0xff49a3af),
           onTap: _onItemTapped,
-        ),
+        ),*/
       ),
     );
   }
