@@ -819,11 +819,11 @@ class _ClientListState extends State<ClientList> {
                                  fit: BoxFit.cover,
 
                                ),
-                               width: 30,
+                               width: 24,
                                height: 24,
                              ),
                              VerticalSpacing(value: 7),
-                             Text("Clients",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                             Text("Clients",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10))
                            ],
                          ),
                        ),
@@ -849,11 +849,11 @@ class _ClientListState extends State<ClientList> {
                                  fit: BoxFit.cover,
 
                                ),
-                               width: 30,
+                               width: 24,
                                height: 24,
                              ),
                              VerticalSpacing(value: 7),
-                             Text("Search",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                             Text("Search",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10))
                            ],
                          ),                       ),
                      ),
@@ -870,11 +870,11 @@ class _ClientListState extends State<ClientList> {
                                  fit: BoxFit.cover,
 
                                ),
-                               width: 30,
+                               width: 24,
                                height: 24,
                              ),
                              VerticalSpacing(value: 7),
-                             Text("profile",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                             Text("profile",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10))
                            ],
                          ),                       ),
                      ),
