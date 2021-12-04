@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getxfire/getxfire.dart';
 import 'package:infightsales/core/services/dependency_management.dart';
 import 'package:infightsales/core/services/local_database.dart';
 import 'package:infightsales/view_and_controllers/splash_screen/splash_screen.dart';
@@ -12,7 +11,6 @@ import 'package:infightsales/view_and_controllers/splash_screen/splash_screen.da
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

@@ -17,4 +17,11 @@ class AppAssets
 
   static String fav_icon="assets/icons/fav.png";
 
+
+  static String clinet="assets/icons/client.png";
+  static String home="assets/icons/home.png";
+  static String map="assets/icons/map.png";
+  static String menu="assets/icons/menu.png";
+  static String search="assets/icons/search.png";
+
 }

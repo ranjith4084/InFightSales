@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxfire/getxfire.dart';
 import 'package:infightsales/core/api_calls/auth.dart';
 import 'package:infightsales/core/api_calls/firestore_gateway.dart';
 import 'package:infightsales/core/app_rss/app_strings.dart';
