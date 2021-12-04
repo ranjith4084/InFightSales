@@ -1,12 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:infightsales/view_and_controllers/ProductDescription/Product_Description.dart';
-import 'package:infightsales/view_and_controllers/add_visit/add_visit.dart';
-=======
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
->>>>>>> 3e3c65c774fb31d67603451b5a2f5b0a3ddcabc2
 import 'package:infightsales/view_and_controllers/client_list/client_list.dart';
 import 'package:infightsales/view_and_controllers/forget_password/forget_password.dart';
 import 'package:infightsales/view_and_controllers/map_Screen/map_screen.dart';
@@ -22,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  Color(0xff49a3af),
+      backgroundColor: Color(0xff49a3af),
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
@@ -32,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-               VerticalSpacing(value: 55),
+              VerticalSpacing(value: 55),
               Container(
                 width: 88,
                 height: 100,
@@ -100,9 +95,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 53),
+              SizedBox(height: 60),
               Container(
                 width: 400,
+                height:588,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(80),
@@ -145,7 +141,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     VerticalSpacing(value: 5),
-
                     TextFormField(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -159,7 +154,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       onChanged: (value) {},
                     ),
-
                     Container(
                       width: 450,
                       height: 110.11,
@@ -177,57 +171,74 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           SizedBox(height: 10),
                           TextFormField(
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter some text';
-                              }
-                              return null;
-                            },
-                            decoration: InputDecoration(
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                borderSide: BorderSide(
-                                  color: Colors.black,
-                                  width: 1.0,
-                                ),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                borderSide: BorderSide(),
-                              ),
-                            ),
-                            onChanged: (value) {},
-                          ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter some text';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Enter Password",
+                        fillColor: Colors.white,
+                      ),
+                      onChanged: (value) {},
+                    ),
+                          // TextFormField(
+                          //   validator: (value) {
+                          //     if (value == null || value.isEmpty) {
+                          //       return 'Please enter some text';
+                          //     }
+                          //     return null;
+                          //   },
+                          //   decoration: InputDecoration(
+                          //     fillColor: Colors.white,
+                          //     enabledBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(10.0),
+                          //       borderSide: BorderSide(
+                          //         color: Colors.black,
+                          //         width: 1.0,
+                          //       ),
+                          //     ),
+                          //     border: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(10.0),
+                          //       borderSide: BorderSide(),
+                          //     ),
+                          //   ),
+                          //   onChanged: (value) {},
+                          // ),
                           SizedBox(height: 10.55),
                         ],
                       ),
                     ),
                     SizedBox(height: 10.05),
-                    TextButton(
-                      onPressed: () {
-                        print("Clicked 1");
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => ForgetPassword()),
-                        );
-                      },
-                      child: Text(
-                        "Forgot Password?",
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                          color: Color(0xff1a1a1a),
-                          fontSize: 16,
+                    Align(
+      alignment: Alignment.centerRight,
+      child:Container(
+                      child: TextButton(
+                        onPressed: () {
+                          print("Clicked 1");
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => ForgetPassword(),),
+                          );
+                        },
+                        child: Text(
+                          "Forgot Password?",
+                          textAlign: TextAlign.right,
+                          style: TextStyle(
+                            color: Color(0xff1a1a1a),
+                            fontSize: 16,
+                          ),
                         ),
                       ),
-                    ),
+                    ),),
                     SizedBox(height: 19.05),
                     InkWell(
                       onTap: () {
                         print("Clicked 2");
-                        // Navigator.of(context).push(
-                        //   MaterialPageRoute(builder: (context) => MapScreen()),
-                        // );
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => ClientList()),
+                        );
                       },
                       child: Container(
                         width: 295,
@@ -274,14 +285,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     SizedBox(height: 39.05),
-                    InkWell(
-                      onTap: () {
-                        print("Clicked 3");
-                      },
-                      child: Text(
-                        "Don’t have an account? Sign up",
-                        style: TextStyle(
-                          fontSize: 16,
+                    Center(
+                      child: InkWell(
+                        onTap: () {
+                          print("Clicked 3");
+                        },
+                        child: Text(
+                          "Don’t have an account? Sign up",
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
