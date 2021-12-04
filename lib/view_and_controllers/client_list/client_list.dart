@@ -795,11 +795,11 @@ class _ClientListState extends State<ClientList> {
                                  fit: BoxFit.cover,
 
                                ),
-                               width: 30,
+                               width: 24,
                                height: 24,
                              ),
                              VerticalSpacing(value: 7),
-                             Text("Home",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                             Text("Home",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10))
                            ],
                          ),
                        ),
@@ -886,13 +886,36 @@ class _ClientListState extends State<ClientList> {
              Align(
                alignment: Alignment.topCenter,
                child: Container(
-                 height: 50,
-                 width: 50,
-                 margin: EdgeInsets.only(top: 1),
+                 height: 60,
+                 width: 60,
                  decoration: BoxDecoration(
                    shape: BoxShape.circle,
-                   color: Colors.lightGreenAccent,
+                   color: Colors.white,
 
+                 ),
+                 alignment: Alignment.center,
+                 child: Container(
+                   height: 45,
+                   width: 45,
+                   decoration: BoxDecoration(
+                     color: Color(0xFF49A3AF),
+                     shape: BoxShape.circle,
+                     boxShadow: [
+                       BoxShadow(
+                         color: Color(0x3f49a3af),
+                         blurRadius: 16,
+                         offset: Offset(0, 6),
+                       ),
+                     ],
+                   ),
+                 alignment: Alignment.center,
+                   child: SizedBox(
+                     width: 25,
+                     height: 25,
+                     child: Image(
+                       image: AssetImage(AppAssets.search),
+                     ),
+                   ),
                  ),
                ),
              ),
