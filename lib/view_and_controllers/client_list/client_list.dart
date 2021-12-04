@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:infightsales/view_and_controllers/login_screen/loginscreen.dart';
@@ -770,23 +771,131 @@ class _ClientListState extends State<ClientList> {
        extendBody: true,
        bottomNavigationBar: Container(
          height: 80,
-         color: Colors.red,
          child: Stack(
            children: [
+
              Align(
-               alignment: Alignment.topCenter,
-               child: Container(
-                 height: 20,
-                 width: 20,
-                 color: Colors.lightGreenAccent,
-               ),
-             ),
-            /* Alig(
+              alignment: Alignment.bottomCenter,
                child: Container(
                  height: 60,
                  color: Colors.white,
+                 child: Row(
+                   children: [
+                     Expanded(
+                       child: Container(
+                         alignment: Alignment.center,
+                         child: Column(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           crossAxisAlignment: CrossAxisAlignment.center,
+                           children: [
+                             SizedBox(
+
+                               child: Image(
+                                 image: AssetImage(AppAssets.home,),
+                                 fit: BoxFit.cover,
+
+                               ),
+                               width: 30,
+                               height: 24,
+                             ),
+                             VerticalSpacing(value: 7),
+                             Text("Home",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                           ],
+                         ),
+                       ),
+                     ),
+                     Expanded(
+                       child: Container(
+                         alignment: Alignment.center,
+
+                         child: Column(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           crossAxisAlignment: CrossAxisAlignment.center,
+                           children: [
+                             SizedBox(
+
+                               child: Image(
+                                 image: AssetImage(AppAssets.clinet,),
+                                 fit: BoxFit.cover,
+
+                               ),
+                               width: 30,
+                               height: 24,
+                             ),
+                             VerticalSpacing(value: 7),
+                             Text("Clients",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                           ],
+                         ),
+                       ),
+                     ),
+                     Expanded(
+                       child: Container(
+                         alignment: Alignment.center,
+
+                                            ),
+                     ),
+                     Expanded(
+                       child: Container(
+                         alignment: Alignment.center,
+
+                         child: Column(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           crossAxisAlignment: CrossAxisAlignment.center,
+                           children: [
+                             SizedBox(
+
+                               child: Image(
+                                 image: AssetImage(AppAssets.map,),
+                                 fit: BoxFit.cover,
+
+                               ),
+                               width: 30,
+                               height: 24,
+                             ),
+                             VerticalSpacing(value: 7),
+                             Text("Search",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                           ],
+                         ),                       ),
+                     ),
+                     Expanded(
+                       child: Container(
+                         child: Column(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           crossAxisAlignment: CrossAxisAlignment.center,
+                           children: [
+                             SizedBox(
+
+                               child: Image(
+                                 image: AssetImage(AppAssets.menu,),
+                                 fit: BoxFit.cover,
+
+                               ),
+                               width: 30,
+                               height: 24,
+                             ),
+                             VerticalSpacing(value: 7),
+                             Text("profile",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold))
+                           ],
+                         ),                       ),
+                     ),
+                   ],
+                 ),
+
                ),
-             )*/
+             ),
+             Align(
+               alignment: Alignment.topCenter,
+               child: Container(
+                 height: 50,
+                 width: 50,
+                 margin: EdgeInsets.only(top: 1),
+                 decoration: BoxDecoration(
+                   shape: BoxShape.circle,
+                   color: Colors.lightGreenAccent,
+
+                 ),
+               ),
+             ),
            ],
          ),
        ),
