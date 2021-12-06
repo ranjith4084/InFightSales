@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:infightsales/view_and_controllers/bottom_navigation/bottom_navigation.dart';
+import 'package:infightsales/view_and_controllers/dashboard/dashboard_screen.dart';
 import 'package:infightsales/view_and_controllers/login_screen/loginscreen.dart';
 
 class ClientList extends StatefulWidget {
@@ -13,10 +13,15 @@ class ClientList extends StatefulWidget {
 }
 
 class _ClientListState extends State<ClientList> {
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
-
-  List<bool> iconFlags=[true,false,false,false];
-
+  var _selectedIndex = 0;
+  @override
+  int _index = 0;
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -53,7 +58,7 @@ class _ClientListState extends State<ClientList> {
                               onTap: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                      builder: (context) => LoginScreen()),
+                                      builder: (context) => BottomNavigation()),
                                 );
                               },
                               child: Icon(Icons.arrow_back, color: Colors.white)),
@@ -763,246 +768,10 @@ class _ClientListState extends State<ClientList> {
             ],
           ),
         ),
-       extendBody: true,
-       bottomNavigationBar: Container(
-         height: 80,
-         child: Stack(
-           children: [
+        extendBody: true,
 
-             Align(
-              alignment: Alignment.bottomCenter,
-               child: Container(
-                 height: 60,
-                 color: Colors.white,
-                 child: Row(
-                   children: [
-                     Expanded(
-                       child: InkWell(
-                         child: Container(
-                           alignment: Alignment.center,
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               SizedBox(
 
-                                 child: Image(
-                                   image: AssetImage(AppAssets.home,),
-                                   fit: BoxFit.cover,
-                                   color: iconFlags[0]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),
-
-                                 ),
-                                 width: 24,
-                                 height: 24,
-                               ),
-                               VerticalSpacing(value: 7),
-                               Text("Home",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[0]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
-                             ],
-                           ),
-                         ),
-                         onTap: (){
-
-                           // this is home button
-                           controlIconFlags(0);
-
-                         },
-                       ),
-                     ),
-                     Expanded(
-                       child: InkWell(
-                         onTap: (){
-
-                           // this is home button
-                           controlIconFlags(1);
-
-                         },
-                         child: Container(
-                           alignment: Alignment.center,
-
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               SizedBox(
-
-                                 child: Image(
-                                   image: AssetImage(AppAssets.clinet,),
-                                   fit: BoxFit.cover,
-                                   color: iconFlags[1]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),
-                                 ),
-                                 width: 24,
-                                 height: 24,
-                               ),
-                               VerticalSpacing(value: 7),
-                               Text("Clients",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[1]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
-                             ],
-                           ),
-                         ),
-                       ),
-                     ),
-                     Expanded(
-                       child: Container(
-                         alignment: Alignment.center,
-
-                                            ),
-                     ),
-                     Expanded(
-                       child: InkWell(
-                         onTap: (){
-
-                           // this is home button
-                           controlIconFlags(2);
-
-                         },
-                         child: Container(
-                           alignment: Alignment.center,
-
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               SizedBox(
-
-                                 child: Image(
-                                   image: AssetImage(AppAssets.map,),
-                                   fit: BoxFit.cover,
-                                   color: iconFlags[2]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),
-
-                                 ),
-                                 width: 24,
-                                 height: 24,
-                               ),
-                               VerticalSpacing(value: 7),
-                               Text("Search",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[2]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
-                             ],
-                           ),                       ),
-                       ),
-                     ),
-                     Expanded(
-                       child: InkWell(
-                         onTap: (){
-
-                           // this is home button
-                           controlIconFlags(3);
-
-                         },
-                         child: Container(
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               SizedBox(
-
-                                 child: Image(
-                                   image: AssetImage(AppAssets.menu,),
-                                   fit: BoxFit.cover,
-                                   color: iconFlags[3]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),
-                                 ),
-                                 width: 24,
-                                 height: 24,
-                               ),
-                               VerticalSpacing(value: 7),
-                               Text("profile",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[3]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
-                             ],
-                           ),                       ),
-                       ),
-                     ),
-                   ],
-                 ),
-
-               ),
-             ),
-             Align(
-               alignment: Alignment.topCenter,
-               child: Container(
-                 height: 60,
-                 width: 60,
-                 decoration: BoxDecoration(
-                   shape: BoxShape.circle,
-                   color: Colors.white,
-
-                 ),
-                 alignment: Alignment.center,
-                 child: Container(
-                   height: 45,
-                   width: 45,
-                   decoration: BoxDecoration(
-                     color: Color(0xFF49A3AF),
-                     shape: BoxShape.circle,
-                     boxShadow: [
-                       BoxShadow(
-                         color: Color(0x3f49a3af),
-                         blurRadius: 16,
-                         offset: Offset(0, 6),
-                       ),
-                     ],
-                   ),
-                 alignment: Alignment.center,
-                   child: SizedBox(
-                     width: 25,
-                     height: 25,
-                     child: Image(
-                       image: AssetImage(AppAssets.search),
-                     ),
-                   ),
-                 ),
-               ),
-             ),
-           ],
-         ),
-       ),
-       /* bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white,
-          elevation: 0,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.people_rounded,
-              ),
-              label: 'Clients',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.location_on_outlined),
-              label: 'Location',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_sharp),
-              label: 'Profile',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Color(0xff49a3af),
-          onTap: _onItemTapped,
-        ),*/
       ),
     );
-  }
-
-
-
-  controlIconFlags(int value)
-  {
-    for(int i=0;i<iconFlags.length;i++)
-      {
-        if(i==value)
-          {
-            iconFlags[i]=true;
-          }else
-            {
-              iconFlags[i]=false;
-            }
-      }
-    setState(() {
-
-    });
   }
 }
