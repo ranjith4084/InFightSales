@@ -166,8 +166,8 @@ Padding(
             child: Align(
                 alignment: Alignment.center,
                 child: Container(
-                    width: 22,
-                    height: 19,
+                    width: 26,
+                    height: 21,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                     ),
@@ -182,18 +182,228 @@ Padding(
 ),
 SizedBox(height: 20,),
 Center(
-  child:   Container( width: 350,height: 120,decoration: BoxDecoration(shape: BoxShape.rectangle,color:Colors.grey[300], ),
-   child:Column(
-     mainAxisAlignment: MainAxisAlignment.start,
-     crossAxisAlignment: CrossAxisAlignment.start,
-     children: [
-       Text("Lorem Ipsm",style: TextStyle(color: Colors.black,fontSize: 20,fontFamily: "Josefin Sans",fontWeight: FontWeight.w600,),),
-        Text("Agent Name",style: TextStyle(color: Colors.black,fontSize: 20,fontFamily: "Josefin Sans",fontWeight: FontWeight.w600,),),
-     ],
+  child:   Container( width: 350,height: 120,decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],shape: BoxShape.rectangle,  borderRadius: BorderRadius.all(Radius.circular(20)),color:Colors.grey[300], ),
+   child:Padding(
+     padding: const EdgeInsets.all(18.0),
+     child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       children: [
+         Column(
+           mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text("Lorem Ipsm",style: TextStyle(color: Colors.black,fontSize: 20,fontFamily: "Josefin Sans",fontWeight: FontWeight.w600,),),
+               SizedBox(height: 8,),
+                Row(
+                children: [
+                  Icon(Icons.people_alt,color: Colors.black),
+                  SizedBox(width: 5,),
+                  Text("Agent Name",style: TextStyle(color: Colors.black,fontSize: 16,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+                ],
+              ),
+                SizedBox(height: 8,),
+               Text("20 Dec 2021",style: TextStyle(color: Colors.black,fontSize: 14,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+           ],
+         ),
+         Container(
+    width: 38,
+    height: 38,
+    child: Stack(
+        children:[Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              
+                shape: BoxShape.circle,
+                color: Color(0xff383838),
+            ),
+        ),
+        Positioned.fill(
+            child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                    width: 232,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                    ),
+                    child:  Icon(Icons.keyboard_arrow_down, color: Colors.white,size: 40,),
+                ),
+            ),
+        ),],
+    ),
+)
+       ],
+     ),
    )
           ),
 ),
-
+SizedBox(height: 30,),
+Center(
+  child:   Container( width: 350,height: 120,decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],shape: BoxShape.rectangle,  borderRadius: BorderRadius.all(Radius.circular(20)),color:Colors.grey[300], ),
+   child:Padding(
+     padding: const EdgeInsets.all(18.0),
+     child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       children: [
+         Column(
+           mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text("Lorem Ipsm",style: TextStyle(color: Colors.black,fontSize: 20,fontFamily: "Josefin Sans",fontWeight: FontWeight.w600,),),
+               SizedBox(height: 8,),
+                Row(
+                children: [
+                  Icon(Icons.people_alt,color: Colors.black),
+                  SizedBox(width: 5,),
+                  Text("Agent Name",style: TextStyle(color: Colors.black,fontSize: 16,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+                ],
+              ),
+                SizedBox(height: 8,),
+               Text("20 Dec 2021",style: TextStyle(color: Colors.black,fontSize: 14,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+           ],
+         ),
+         Container(
+    width: 38,
+    height: 38,
+    child: Stack(
+        children:[Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              
+                shape: BoxShape.circle,
+                color: Color(0xff383838),
+            ),
+        ),
+        Positioned.fill(
+            child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                    width: 232,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                    ),
+                    child:  Icon(Icons.keyboard_arrow_down, color: Colors.white,size: 40,),
+                ),
+            ),
+        ),],
+    ),
+)
+       ],
+     ),
+   )
+          ),
+),
+SizedBox(height: 30,),
+Center(
+  child:   Container( width: 350,height: 120,decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],shape: BoxShape.rectangle,  borderRadius: BorderRadius.all(Radius.circular(20)),color:Colors.grey[300], ),
+   child:Padding(
+     padding: const EdgeInsets.all(18.0),
+     child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       children: [
+         Column(
+           mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text("Lorem Ipsm",style: TextStyle(color: Colors.black,fontSize: 20,fontFamily: "Josefin Sans",fontWeight: FontWeight.w600,),),
+               SizedBox(height: 8,),
+                Row(
+                children: [
+                  Icon(Icons.people_alt,color: Colors.black),
+                  SizedBox(width: 5,),
+                  Text("Agent Name",style: TextStyle(color: Colors.black,fontSize: 16,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+                ],
+              ),
+                SizedBox(height: 8,),
+               Text("20 Dec 2021",style: TextStyle(color: Colors.black,fontSize: 14,fontFamily: "Josefin Sans",fontWeight: FontWeight.w400,),),
+           ],
+         ),
+         Container(
+    width: 38,
+    height: 38,
+    child: Stack(
+        children:[Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              
+                shape: BoxShape.circle,
+                color: Color(0xff49A3AF),
+            ),
+        ),
+        Positioned.fill(
+            child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                    width: 232,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                    ),
+                    child:  Icon(Icons.keyboard_arrow_up, color: Colors.white,size: 40,),
+                ),
+            ),
+        ),],
+    ),
+)
+       ],
+     ),
+   )
+          ),
+),
+SizedBox(height: 50,),
+///
         ],
       ),),
     );
