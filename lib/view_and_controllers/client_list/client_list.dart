@@ -172,7 +172,23 @@ class _ClientListState extends State<ClientList> {
                                   Container(
                                     width: 305,
                                     height: 106,
-                                    decoration: BoxDecoration(
+                                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.white,
                                     ),
@@ -321,7 +337,23 @@ class _ClientListState extends State<ClientList> {
                                   Container(
                                     width: 305,
                                     height: 106,
-                                    decoration: BoxDecoration(
+                                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.white,
                                     ),
@@ -470,7 +502,23 @@ class _ClientListState extends State<ClientList> {
                                   Container(
                                     width: 305,
                                     height: 106,
-                                    decoration: BoxDecoration(
+                                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.white,
                                     ),
@@ -619,7 +667,23 @@ class _ClientListState extends State<ClientList> {
                                   Container(
                                     width: 305,
                                     height: 106,
-                                    decoration: BoxDecoration(
+                                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.white,
                                     ),

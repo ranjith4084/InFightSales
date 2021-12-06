@@ -56,6 +56,7 @@ class _DashboardState extends State<Dashboard> {
                 width: 400,
                 height: 98,
                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.all(Radius.circular(20)),
                     // border: Border.all(color: Color(0xffF5F5F5),),
                     shape: BoxShape
                         .rectangle, // BoxShape.circle or BoxShape.retangle
@@ -86,12 +87,22 @@ class _DashboardState extends State<Dashboard> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
-                      BoxShadow(
-                        color: Color(0x21000000),
-                        blurRadius: 15,
-                        offset: Offset(0, 4),
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
                       ),
-                    ],
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                     color: Color(0xff49a3af),
                   ),
                   padding: const EdgeInsets.symmetric(
@@ -238,7 +249,23 @@ class _DashboardState extends State<Dashboard> {
                       Container(
                         width: 150,
                         height: 180,
-                        decoration: BoxDecoration(
+                        decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white,
                         ),
@@ -456,7 +483,23 @@ class _DashboardState extends State<Dashboard> {
                   Container(
                     width: 326,
                     height: 86,
-                    decoration: BoxDecoration(
+                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                       borderRadius: BorderRadius.circular(10),
                       color: Color(0xffEEEEEE),
                     ),
@@ -576,7 +619,23 @@ class _DashboardState extends State<Dashboard> {
                   Container(
                     width: 326,
                     height: 86,
-                    decoration: BoxDecoration(
+                    decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: const Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                       borderRadius: BorderRadius.circular(10),
                       color: Color(0xff49a3af),
                     ),
