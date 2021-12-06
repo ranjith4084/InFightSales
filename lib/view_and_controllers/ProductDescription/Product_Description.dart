@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:infightsales/view_and_controllers/bottom_navigation/bottom_navigation.dart';
+import 'package:infightsales/view_and_controllers/client_list/client_list.dart';
 import 'package:infightsales/view_and_controllers/dashboard/dashboard_screen.dart';
+import 'package:infightsales/view_and_controllers/product%20_screen/product_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
 import 'package:infightsales/view_and_controllers/login_screen/loginscreen.dart';
@@ -24,6 +26,13 @@ class _ProductDescriptionState extends State<ProductDescription> {
   List imageNames = ["1.png", "2.png", "3.png"];
   var selectedImagePage = 0;
   Widget build(BuildContext context) {
+    List<Widget> _widgetOptions = <Widget>[
+      Dashboard(),
+      ClientList(),
+      Dashboard(),
+      ProductScreen(),
+      Dashboard(),
+    ];
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -67,11 +76,9 @@ class _ProductDescriptionState extends State<ProductDescription> {
                     Container(
                       decoration: BoxDecoration(
                           color: Colors.black,
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(50))),
+                          borderRadius: BorderRadius.all(Radius.circular(50))),
                       height: 345,
                       child: PageView.builder(
-                        
                           onPageChanged: (num) {
                             setState(() {
                               selectedImagePage = num;
@@ -80,16 +87,14 @@ class _ProductDescriptionState extends State<ProductDescription> {
                           itemCount: 3,
                           itemBuilder: (BuildContext context, index) {
                             return Container(
-                             
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  // borderRadius:
-                                  //     BorderRadius.all(Radius.circular(50)
-                                      // )
-                                      ),
+                                color: Colors.white,
+                                // borderRadius:
+                                //     BorderRadius.all(Radius.circular(50)
+                                // )
+                              ),
                               child: Image.asset(
                                 'assets/images/${imageNames[index]}',
-                                
                                 fit: BoxFit.cover,
                               ),
                             );
@@ -137,38 +142,6 @@ class _ProductDescriptionState extends State<ProductDescription> {
             ],
           ),
         ),
-        // bottomNavigationBar: BottomNavigationBar(
-        //   type: BottomNavigationBarType.fixed,
-        //   backgroundColor: Colors.white,
-        //   elevation: 0,
-        //   items: const <BottomNavigationBarItem>[
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.home),
-        //       label: 'Home',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.people_rounded,
-        //       ),
-        //       label: 'Clients',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.search),
-        //       label: 'Search',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.location_on_outlined),
-        //       label: 'Location',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.person_outline_sharp),
-        //       label: 'Profile',
-        //     ),
-        //   ],
-        //   currentIndex: _selectedIndex,
-        //   selectedItemColor: Color(0xff49a3af),
-        //   onTap: _onItemTapped,
-        // ),
       ),
     );
   }

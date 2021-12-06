@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 60),
               Container(
                 width: 400,
-                height:588,
+                height: 588,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(80),
@@ -177,18 +177,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           SizedBox(height: 10),
                           TextFormField(
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter some text';
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(
-                        labelText: "Enter Password",
-                        fillColor: Colors.white,
-                      ),
-                      onChanged: (value) {},
-                    ),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                            decoration: InputDecoration(
+                              labelText: "Enter Password",
+                              fillColor: Colors.white,
+                            ),
+                            onChanged: (value) {},
+                          ),
                           // TextFormField(
                           //   validator: (value) {
                           //     if (value == null || value.isEmpty) {
@@ -218,32 +218,35 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     SizedBox(height: 10.05),
                     Align(
-      alignment: Alignment.centerRight,
-      child:Container(
-                      child: TextButton(
-                        onPressed: () {
-                          print("Clicked 1");
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => ForgetPassword(),),
-                          );
-                        },
-                        child: Text(
-                          "Forgot Password?",
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                            color: Color(0xff1a1a1a),
-                            fontSize: 16,
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        child: TextButton(
+                          onPressed: () {
+                            print("Clicked 1");
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => ForgetPassword(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "Forgot Password?",
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xff1a1a1a),
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
-                    ),),
+                    ),
                     SizedBox(height: 19.05),
                     InkWell(
                       onTap: () {
                         print("Clicked 2");
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => BottomNavigation()),
+                          MaterialPageRoute(
+                              builder: (context) => BottomNavigation()),
                         );
                       },
                       child: Container(
