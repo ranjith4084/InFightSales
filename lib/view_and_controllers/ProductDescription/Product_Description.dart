@@ -26,13 +26,7 @@ class _ProductDescriptionState extends State<ProductDescription> {
   List imageNames = ["1.png", "2.png", "3.png"];
   var selectedImagePage = 0;
   Widget build(BuildContext context) {
-    List<Widget> _widgetOptions = <Widget>[
-      Dashboard(),
-      ClientList(),
-      Dashboard(),
-      ProductScreen(),
-      Dashboard(),
-    ];
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -100,7 +94,7 @@ class _ProductDescriptionState extends State<ProductDescription> {
                             );
                           }),
                     ),
-                    SizedBox(height: 10),
+                 const   SizedBox(height: 10),
                     Center(
                       child: AnimatedSmoothIndicator(
                         activeIndex: selectedImagePage,
@@ -142,7 +136,9 @@ class _ProductDescriptionState extends State<ProductDescription> {
             ],
           ),
         ),
+
       ),
+
     );
   }
 }
