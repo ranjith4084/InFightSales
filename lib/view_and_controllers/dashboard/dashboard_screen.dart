@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
 import 'package:infightsales/view_and_controllers/client_list/client_list.dart';
+import 'package:infightsales/view_and_controllers/client_single/client_single.dart';
 import 'package:infightsales/view_and_controllers/map_Screen/map_screen.dart';
 
 class Dashboard extends StatefulWidget {
@@ -619,53 +622,62 @@ class _DashboardState extends State<Dashboard> {
                               ),
                             ),
                             SizedBox(width: 75),
-                            Container(
-                              width: 85,
-                              height: 36,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 85,
-                                    height: 36,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
-                                      color: Colors.white,
-                                    ),
-                                    padding: const EdgeInsets.only(
-                                      left: 24,
-                                      right: 18,
-                                      top: 10,
-                                      bottom: 4,
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        SizedBox(
-                                          width: 43,
-                                          height: 22,
-                                          child: Text(
-                                            "View",
-                                            style: TextStyle(
-                                              color: Color(0xff383838),
-                                              fontSize: 16,
-                                              fontFamily: "Josefin Sans",
-                                              fontWeight: FontWeight.w700,
+                             InkWell(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ClientSingle()));
+                                    },
+                              child: Container(
+                                width: 85,
+                                height: 36,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 85,
+                                      height: 36,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(50),
+                                        color: Colors.white,
+                                      ),
+                                      padding: const EdgeInsets.only(
+                                        left: 24,
+                                        right: 18,
+                                        top: 10,
+                                        bottom: 4,
+                                      ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          SizedBox(
+                                            width: 43,
+                                            height: 22,
+                                            child: Text(
+                                              "View",
+                                              style: TextStyle(
+                                                color: Color(0xff383838),
+                                                fontSize: 16,
+                                                fontFamily: "Josefin Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
+                         
                           ],
                         ),
                       ),

@@ -141,11 +141,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
                                     color: iconFlags[2]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),
 
                                   ),
-                                  width: 24,
+                                  width: 18,
                                   height: 24,
                                 ),
                                 VerticalSpacing(value: 7),
-                                Text("Search",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[2]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
+                                Text("Product",style: GoogleFonts.josefinSans(fontWeight: FontWeight.bold,fontSize: 10, color: iconFlags[2]==true ? Color(0xFF49A3AF) : Colors.black.withOpacity(.5),))
                               ],
                             ),                       ),
                         ),
