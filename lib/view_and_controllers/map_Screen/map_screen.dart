@@ -38,6 +38,11 @@ class _MapScreenState extends State<MapScreen> {
           child: Image.asset('assets/images/map.png'),
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Color(0xff49a3af),
+        onPressed: () {},
+        label: Text("List View"),
+      ),
     );
   }
 }
