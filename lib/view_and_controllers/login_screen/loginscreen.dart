@@ -2,9 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:infightsales/core/extensions/package_imports_and_exports.dart';
+import 'package:infightsales/view_and_controllers/ProductDescription/Product_Description.dart';
+import 'package:infightsales/view_and_controllers/add_visit/add_visit.dart';
+import 'package:infightsales/view_and_controllers/bottom_navigation/bottom_navigation.dart';
 import 'package:infightsales/view_and_controllers/client_list/client_list.dart';
+import 'package:infightsales/view_and_controllers/dashboard/dashboard_screen.dart';
 import 'package:infightsales/view_and_controllers/forget_password/forget_password.dart';
 import 'package:infightsales/view_and_controllers/map_Screen/map_screen.dart';
+
+import 'package:infightsales/view_and_controllers/product%20_screen/product_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -237,7 +243,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: () {
                         print("Clicked 2");
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => ClientList()),
+                          MaterialPageRoute(builder: (context) => BottomNavigation()),
                         );
                       },
                       child: Container(
