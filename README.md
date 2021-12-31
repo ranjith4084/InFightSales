@@ -1,6 +1,13 @@
 # infightsales
 
 A new Flutter project.
+In this App is based of sales project 
+
+## Photos
+
+
+
+<img src="https://user-images.githubusercontent.com/80382586/147824902-eb8a940b-f073-48d0-b100-89e8fff4c79a.png" width="1300" height="800">
 
 ## Getting Started
 
